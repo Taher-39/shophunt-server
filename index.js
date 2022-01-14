@@ -33,3 +33,5 @@ app.listen(
     `Server running in ${process.env.NODE_ENV} mode on port ${PORT}`.yellow.bold
   )
 );
+
+// mongodb+srv://taher123:taher123@cluster0.4r4hd.mongodb.net/shopHunt
