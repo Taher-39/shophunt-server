@@ -6,6 +6,7 @@ import cors from "cors";
 
 import productRoutes from "./routes/productRoutes.js";
 import userRoutes from "./routes/userRoutes.js";
+import orderRoutes from "./routes/orderRoutes.js";
 import { errorHandler, notFound } from "./middleWare/errorMiddleWare.js";
 dotenv.config();
 
@@ -22,6 +23,7 @@ app.get("/", (req, res) => {
 });
 app.use("/api/products", productRoutes);
 app.use("/api/users", userRoutes);
+app.use("/api/orders", orderRoutes);
 
 app.use(notFound);
 app.use(errorHandler);
@@ -34,4 +36,3 @@ app.listen(
   )
 );
 
-// mongodb+srv://taher123:taher123@cluster0.4r4hd.mongodb.net/shopHunt
